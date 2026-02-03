@@ -1,5 +1,4 @@
 import {test} from "@playwright/test"
-import { parseArgs } from "node:util"
 
 test("Browser login", async({page})=>{
     await page.goto("https://login.salesforce.com/?locale=in")
@@ -8,4 +7,5 @@ test("Browser login", async({page})=>{
     await page.locator("#Login").click()
     await page.waitForTimeout(12000)
     await page.locator("button[title='App Launcher']").click()
+
 })
