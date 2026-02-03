@@ -1,5 +1,4 @@
 import {test} from "@playwright/test"
-import { text } from "node:stream/consumers"
 
 test("Create a Lead", async({page})=>{
     await page.goto("http://leaftaps.com/opentaps/control/main")
@@ -25,4 +24,5 @@ test("Create a Lead", async({page})=>{
     await page.locator('.smallSubmit').click()  
     await page.waitForTimeout(2000)
     page.close()
+
 })
